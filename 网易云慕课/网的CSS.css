@@ -1,0 +1,202 @@
+ul{
+	list-style-type: none;
+}
+
+li{
+	display: inline;
+    float: right;
+    width: 80px;
+    padding: 0px;
+	
+}
+
+a{
+	color: black;
+	 text-decoration:none;
+	 
+}
+
+.toubu{
+	 position: absolute;	
+     color: white;
+     left: 0px;
+     right: 0px;
+     top: 0px;
+	 width: 50px;
+	
+	
+}
+
+.biaoshi{
+	 position: absolute;	
+     color: white;
+     left: 150px;
+     right: 0px;
+     top: 20px;
+}
+
+.shurukuang{
+	 position: absolute;	
+     color: white;
+     left: 500px;
+     right: 0px;
+     top: 40px;		
+	 font-size:0px;
+}
+
+.tijiao{
+	background-color: 	#32CD32;
+	color: 	white;
+	border-radius: 0 100px 100px 0;
+	
+}	
+
+.kecheng{
+    border-radius: 100px 0 0 100px;
+}
+
+.biankuang1{
+    border:1px solid  #32CD32
+}
+input{
+	border:1px solid  #32CD32	
+}
+select{
+	border:1px solid  #32CD32
+}
+
+.liebiao{
+	 position: absolute;	
+     color: white;
+     left: 150px;
+     right: 0px;
+     top: 35px;
+	 margin:0px 40px 20px 0px;
+	 
+}
+	
+div ul ul{
+display: none;
+}
+
+li:hover ul{
+display:block;
+
+}
+
+
+.b1{margin: 8px 40px 8px 0px;}	
+
+.biankuang2{margin: 80px 0px 80px 0px;}
+
+.liebiao2{
+	 position: absolute;	
+     color: white;
+     left: 0px;
+     right: 1100px;
+     top: 150px;
+	 margin:0px 40px 20px 0px;
+}
+	
+	
+
+*{
+        margin:0;
+        padding:0;
+}
+a{
+        text-decoration: none;
+}
+.Carousel{
+        position: relative;
+        width:1500px;
+        height:500px;
+        margin-top:200px;
+        overflow: hidden;
+        border:none;
+        z-index: 1;
+}
+#picture{
+        position: absolute;
+        width: 20000px;
+        height: 400px;
+}
+#picture img{
+        float: left;
+        width:1500px;
+        height:400px;
+}
+.Carousel .arrow{
+        cursor: pointer;
+        position:absolute;
+        top:40%;
+        padding:10px 15px;
+        background-color: rgba(255, 255, 255,0.8);
+        display: inline-block;
+        font-size: 50px;
+        z-index: 2;
+        color:rgb(161, 157, 157);
+        font-weight: bold;
+        display: none;
+}
+.Carousel .arrow_left{
+        left:0;
+}
+.Carousel .arrow_right{
+        right: 0;
+}
+.Carousel:hover .arrow{
+        display: block;
+}
+.Carousel .arrow:hover{
+        background-color: rgb(15, 151, 241);
+        font-weight: bold;
+        color:white;
+}
+
+.boder{
+		margin:20px 150px 100px 150px;
+		margin-top:1%;
+		
+}
+			
+.boder a{
+		padding-right: 25px;
+}
+
+.zi1{
+	
+	margin-left:150px;
+	margin-top:5px;
+}
+
+.hang{
+	display:inline-block;
+}
+
+.boder2{
+		margin:50px 150px 100px 150px;
+			
+}
+
+.boder2 a{
+		padding-right: 50px;
+}
+
+.boder3{
+		margin:0px 150px 100px 150px;
+		margin-top:1%;	
+}
+
+.boder3 a{
+		padding-right: 50px;
+}
+
+
+
+
+
+
+
+
+

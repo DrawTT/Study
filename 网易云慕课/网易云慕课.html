@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>网易云慕课</title>
+
+<style>
+
+</style>
+
+<link href="网的CSS.css"rel="Stylesheet"/>
+
+</head>
+
+<body>
+
+<div>
+  <div class="biaoshi">
+    <img src="网易云慕课标识.PNG" width="250" height="100"/>
+  </div> 
+  <div class="shurukuang">
+     <form>
+	    <select vlaue="课程" class="kecheng" style="width:80px; height:44px" >
+		    <option value="课程">课程</option>
+		    <option value="网校">网校</option>
+		</select>	
+        <input type="text" name="1"  placeholder="行家专业亲授，直击就业痛点" style="width:300px; height:41px;" >
+		<input type="submit" value="搜索" class="tijiao" style="width:80px; height:44px">
+     </form>
+  </div> 
+  <div class="liebiao">
+     <ul>
+       <li><a  href="#"><img src="个人.PNG" ></a>
+	     <ul>
+		    <li><a class="biankuang2" href=".">游客，请登录</a></li>
+			<li><a class="biankuang2" href=".">我的优惠券，兑换</a></li>
+			<li><a class="biankuang2" href=".">我的订单</a></li>
+			<li><a class="biankuang2" href=".">帮助与反馈</a></li>
+			<li><a class="biankuang2" href=".">设置</a></li>
+		 </ul>
+	   </li>	 
+	   <li><a  href="#">登录/注册</a></li>
+	   <li><a class="b1" href="#"><img src="铃铛.PNG" ></a></li>
+	   <li><a href="#"><img src="购物车.PNG" ></a></li>
+	   <li><a href="#">我的学习</a></li>
+	   <li><a href="#">管理后台</a></li>
+     </ul>	  	 
+  </div>
+
+
+</div>
+
+
+<div class="liebiao2">
+    <ul>
+	  <li><a href=".">微专业</a></li>
+	  <li><a href=".">课程分类<a/>
+	     <ul>
+	       <li><a href=".">职场提升</a></li>
+		 </ul>  
+      </li>		   
+	  <li><a href=".">首页</a></li>
+    </ul>
+   
+ 
+</div>
+
+
+<div class="Carousel">
+        <div id="picture">
+            <img src="1.png" alt="">
+            <img src="2.png" alt="">
+            <img src="3.png" alt="">
+            <img src="4.png" alt="">
+			<img src="5.png" alt="">
+			<img src="6.png" alt="">
+			<img src="7.png" alt="">
+			<img src="1.png" alt="">
+        </div>
+        <span  class="arrow arrow_left"><</span>
+        <span  class="arrow arrow_right">></span>
+</div>
+
+<div class="zi1">
+    <h2 class="hang">系统化学习路径</h2><span>网易云课堂六大课堂体系，让学习有章可序</span>
+</div>	
+	
+<div class="boder">
+                
+		<a href="#"><img src="8.png"/></a>
+		<a href="#"><img src="9.png"/></a>
+		<a href="#"><img src="10.png"/></a>
+		<a href="#"><img src="11.png"/></a>
+		<a href="#"><img src="12.png"/></a>
+		<a href="#"><img src="13.png"/></a>
+</div>
+
+<div class="boder2">
+        <h2>课堂直播</h2>
+        <a href="#"><img src="14.png" style="width:310px;height:110px"/></a>   
+        <a href="#"><img src="15.png" style="width:310px;height:110px"/></a>
+        <a href="#"><img src="16.png" style="width:310px;height:110px"/></a>
+</div>
+
+<div class="boder3">
+        <a href="#"><img src="17.png" style="width:310px;height:110px"/></a> 
+        <a href="#"><img src="18.png" style="width:310px;height:110px"/></a> 
+        <a href="#"><img src="19.png" style="width:310px;height:110px"/></a> 
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var pic =document.getElementById('picture');
+    var next = document.querySelector(".arrow_right");
+    var prev = document.querySelector(".arrow_left");
+    var imgwidth=pic.children[0].offsetWidth;
+    var move=0;
+    console.log("imgWidth="+imgwidth);
+    next.onclick=function(){
+        if(move==pic.children.length-1){
+            move=0;
+            pic.style.left=0+"px";
+        }
+        move++;
+        animate(pic,-move*imgwidth);
+    }
+    prev.onclick=function(){
+        if(move==0){
+            move=pic.children.length-1;
+            pic.style.left=-move*imgwidth+"px";
+        }
+        move--;
+        animate(pic,-move*imgwidth);
+    }
+    var timer = null;
+    function autoPlay () {
+    timer = setInterval(function () {
+        next.onclick();
+    },2000);
+    }
+    autoPlay();
+    var Carousel = document.querySelector(".Carousel");
+    Carousel.onmouseenter = function () {
+    clearInterval(timer);
+    }
+    Carousel.onmouseleave = function () {
+    autoPlay();  
+    }
+    function animate(element,distance){
+        clearInterval(element.timer)
+        element.timer=setInterval(function(){
+             var present=element.offsetLeft;//获取元素的当前的位置
+             var movement=10;//每次移动的距离
+             movement=present<distance?movement:-movement;    
+             present+=movement;//当前移动到位置
+             if(Math.abs(present-distance)>Math.abs(movement)){
+                 element.style.left=present+"px"
+             }else{
+                 clearInterval(element.timer);
+                 element.style.left=distance+"px"
+             }
+        },10);
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
